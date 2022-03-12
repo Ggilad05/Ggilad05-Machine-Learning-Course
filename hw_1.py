@@ -97,7 +97,7 @@ class PAL:
         while check:
             misclassified_points = [i for i in np.arange(0, len(self.dataset.input), 1) if np.sign(np.dot(self.w, self.dataset.input[i]))
                                     != self.dataset.output[i]]
-            classified_points = [i for i in np.arange(0, 10, 1) if np.sign(np.dot(self.w, self.dataset.input[i]))
+            classified_points = [i for i in np.arange(0, len(self.dataset.input), 1) if np.sign(np.dot(self.w, self.dataset.input[i]))
                                     == self.dataset.output[i]]
             if not misclassified_points:
                 check = False
